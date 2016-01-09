@@ -10,6 +10,7 @@ namespace LOPRuby
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
