@@ -128,12 +128,15 @@ end
 calc = Calculator.new
 puts calc.send("add", 2, 3)
 
-def CreateCounter(className)
-  eval("
-       def #{className}Counter
-          puts 'Counter for class #{className}'
-       end")
+class CounterGenerator
+	def CreateCounter(className)
+	  eval("
+		   def #{className}Counter
+			  puts 'Counter for class #{className}'
+		   end")
+	end
 end
 
-CreateCounter("Bird")
-BirdCounter()
+counterGen = CounterGenerator.new
+counterGen.CreateCounter("Bird")
+counterGen.BirdCounter()
